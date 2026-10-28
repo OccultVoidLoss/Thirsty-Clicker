@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://c18bq4ao22rn"]
+
+[ext_resource type="Script" uid="uid://y44olhcriixt" path="res://change_scene.gd" id="1_d2gnm"]
+
+[node name="Button" type="Button" unique_id=1512552891]
+offset_left = 132.0
+offset_top = 43.0
+offset_right = 523.0
+offset_bottom = 291.0
+text = "MUDAR PRA ALGUMA COISA"
+script = ExtResource("1_d2gnm")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://wivwvralbd3p"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_bhunq"]
+font_size = 100
+
+[node name="Label" type="Label" unique_id=339614231]
+offset_left = 260.0
+offset_top = 372.0
+offset_right = 1569.0
+offset_bottom = 509.0
+text = "TESTE PORRA VAI SE FUDER"
+label_settings = SubResource("LabelSettings_bhunq")
