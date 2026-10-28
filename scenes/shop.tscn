@@ -1,12 +1,50 @@
 [gd_scene format=3 uid="uid://wivwvralbd3p"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_bhunq"]
+[ext_resource type="Theme" uid="uid://bulschr08lewf" path="res://default.tres" id="1_032fp"]
+[ext_resource type="Script" uid="uid://wclan6xbi7eg" path="res://scenes/points_display.gd" id="1_xfvoa"]
+[ext_resource type="PackedScene" uid="uid://d4m08kogdjmxk" path="res://systems/clickpower_upgrade.tscn" id="2_1l46r"]
+[ext_resource type="PackedScene" uid="uid://c18bq4ao22rn" path="res://systems/change_scene_button.tscn" id="3_1l46r"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_032fp"]
 font_size = 100
 
-[node name="Label" type="Label" unique_id=339614231]
-offset_left = 260.0
-offset_top = 372.0
-offset_right = 1569.0
-offset_bottom = 509.0
-text = "TESTE PORRA VAI SE FUDER"
-label_settings = SubResource("LabelSettings_bhunq")
+[node name="shop" type="Control" unique_id=1516198819]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Points_display" type="Label" parent="." unique_id=1934234967]
+layout_mode = 0
+offset_left = 898.0
+offset_top = 81.0
+offset_right = 991.0
+offset_bottom = 218.0
+theme = ExtResource("1_032fp")
+text = "0"
+label_settings = SubResource("LabelSettings_032fp")
+horizontal_alignment = 1
+script = ExtResource("1_xfvoa")
+
+[node name="Clickpower_Upgrade" parent="." unique_id=1502573941 instance=ExtResource("2_1l46r")]
+layout_mode = 0
+offset_left = 240.0
+offset_top = 352.0
+offset_right = 619.0
+offset_bottom = 432.0
+theme_override_font_sizes/font_size = 29
+text = "Real Fangs
+Cost: 10 blood
+"
+max_level = 10
+
+[node name="Button2" parent="." unique_id=1512552891 instance=ExtResource("3_1l46r")]
+layout_mode = 0
+offset_left = 811.0
+offset_top = 933.0
+offset_right = 1023.0
+offset_bottom = 992.0
+text = "VOLTAR AO JOGO"
+scene_name = "game"

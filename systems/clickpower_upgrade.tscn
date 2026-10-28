@@ -1,23 +1,27 @@
 [gd_scene format=3 uid="uid://d4m08kogdjmxk"]
 
 [ext_resource type="Script" uid="uid://5apiow371ja3" path="res://systems/clickpower_upgrade.gd" id="1_m4wae"]
+[ext_resource type="Theme" uid="uid://bulschr08lewf" path="res://default.tres" id="1_qnjmd"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_bhunq"]
-font_size = 7
+font_size = 39
 font_color = Color(1, 0, 0.12156863, 1)
 
 [node name="Clickpower_Upgrade" type="Button" unique_id=1502573941]
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 64.0
+offset_top = 28.0
+offset_right = 502.0
+offset_bottom = 120.0
+theme = ExtResource("1_qnjmd")
 text = "UPGRADE TEXT"
 script = ExtResource("1_m4wae")
 
 [node name="Button_label" type="Label" parent="." unique_id=845725431]
 layout_mode = 0
-offset_left = -15.0
-offset_top = 32.0
-offset_right = 144.0
-offset_bottom = 55.0
+offset_left = -105.0
+offset_top = 99.0
+offset_right = 613.0
+offset_bottom = 168.0
 text = "You don't have enough blood!"
 label_settings = SubResource("LabelSettings_bhunq")
 horizontal_alignment = 1

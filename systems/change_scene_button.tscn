@@ -1,12 +1,21 @@
 [gd_scene format=3 uid="uid://c18bq4ao22rn"]
 
 [ext_resource type="Script" uid="uid://y44olhcriixt" path="res://change_scene.gd" id="1_d2gnm"]
+[ext_resource type="Theme" uid="uid://bulschr08lewf" path="res://default.tres" id="1_qp6nh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1l46r"]
+bg_color = Color(0.9905358, 0.6101157, 0.5769273, 1)
+corner_detail = 20
 
 [node name="Button" type="Button" unique_id=1512552891]
 offset_left = 132.0
 offset_top = 43.0
-offset_right = 523.0
-offset_bottom = 291.0
+offset_right = 507.0
+offset_bottom = 261.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_qp6nh")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1l46r")
 text = "MUDAR PRA ALGUMA COISA"
 script = ExtResource("1_d2gnm")
 

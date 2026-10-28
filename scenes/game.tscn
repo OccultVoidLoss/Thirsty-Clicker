@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://duhwm7m5hc506"]
 
 [ext_resource type="PackedScene" uid="uid://vswro7vpx2tt" path="res://entities/clicker.tscn" id="1_uwrxv"]
+[ext_resource type="Theme" uid="uid://bulschr08lewf" path="res://default.tres" id="2_lbhrr"]
 [ext_resource type="Script" uid="uid://wclan6xbi7eg" path="res://scenes/points_display.gd" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://c18bq4ao22rn" path="res://systems/change_scene_button.tscn" id="3_lnu2h"]
 
@@ -22,15 +23,16 @@ offset_left = 898.0
 offset_top = 81.0
 offset_right = 991.0
 offset_bottom = 218.0
+theme = ExtResource("2_lbhrr")
 text = "0"
 label_settings = SubResource("LabelSettings_bhunq")
 horizontal_alignment = 1
 script = ExtResource("2_yqjtg")
 
 [node name="Button2" parent="." unique_id=1512552891 instance=ExtResource("3_lnu2h")]
-offset_left = 114.0
-offset_top = 732.0
-offset_right = 505.0
-offset_bottom = 980.0
+offset_left = 103.0
+offset_top = 915.0
+offset_right = 248.0
+offset_bottom = 979.0
 text = "LOJA"
 scene_name = "shop"
