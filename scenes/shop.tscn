@@ -4,9 +4,11 @@
 [ext_resource type="Script" uid="uid://wclan6xbi7eg" path="res://scenes/points_display.gd" id="1_xfvoa"]
 [ext_resource type="PackedScene" uid="uid://d4m08kogdjmxk" path="res://systems/clickpower_upgrade.tscn" id="2_1l46r"]
 [ext_resource type="PackedScene" uid="uid://c18bq4ao22rn" path="res://systems/change_scene_button.tscn" id="3_1l46r"]
+[ext_resource type="Texture2D" uid="uid://swfsk4vxrrco" path="res://assets/sprites/blood1.png" id="5_2fc2m"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_032fp"]
 font_size = 100
+font_color = Color(1, 0, 0.12156863, 1)
 
 [node name="shop" type="Control" unique_id=1516198819]
 layout_mode = 3
@@ -48,3 +50,11 @@ offset_right = 1023.0
 offset_bottom = 992.0
 text = "VOLTAR AO JOGO"
 scene_name = "game"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=59446205]
+layout_mode = 0
+offset_left = 1085.0
+offset_top = 36.0
+offset_right = 1239.0
+offset_bottom = 195.0
+texture = ExtResource("5_2fc2m")

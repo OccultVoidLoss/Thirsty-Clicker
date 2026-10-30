@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://by3wq4c7bhjqx"]
+
+[ext_resource type="Theme" uid="uid://bulschr08lewf" path="res://default.tres" id="1_vjb58"]
+[ext_resource type="PackedScene" uid="uid://c18bq4ao22rn" path="res://systems/change_scene_button.tscn" id="2_con2f"]
+[ext_resource type="Script" uid="uid://123cn4mgkkif" path="res://scenes/exit.gd" id="3_con2f"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_bhunq"]
+font_size = 100
+font_color = Color(1, 0, 0.12156863, 1)
+
+[node name="Control" type="Control" unique_id=699220831]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="." unique_id=1074187905]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -471.5
+offset_top = 131.0
+offset_right = 471.5
+offset_bottom = 242.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme = ExtResource("1_vjb58")
+text = "THIRSTY CLICKER"
+label_settings = SubResource("LabelSettings_bhunq")
+
+[node name="Button" parent="." unique_id=1512552891 instance=ExtResource("2_con2f")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -272.5
+offset_top = -231.0
+offset_right = 272.5
+offset_bottom = -106.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "JOGAR"
+scene_name = "game"
+
+[node name="exit" type="Button" parent="." unique_id=49463125]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -272.5
+offset_top = -393.0
+offset_right = 272.5
+offset_bottom = -268.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("1_vjb58")
+text = "SAIR"
+script = ExtResource("3_con2f")
+
+[connection signal="pressed" from="exit" to="exit" method="_on_pressed"]

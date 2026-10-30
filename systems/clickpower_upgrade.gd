@@ -33,7 +33,7 @@ func _on_pressed() -> void:
 		update_text()
 	else:
 		button_label.visible = true
-		button_label.text = "Not enough blood!"
+		button_label.text = "Sangue insuficiente!"
 		button_label.position = Vector2(0, size.y + 5)
 		await get_tree().create_timer(2.0).timeout
 		button_label.visible = false

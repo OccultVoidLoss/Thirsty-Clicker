@@ -4,9 +4,11 @@
 [ext_resource type="Theme" uid="uid://bulschr08lewf" path="res://default.tres" id="2_lbhrr"]
 [ext_resource type="Script" uid="uid://wclan6xbi7eg" path="res://scenes/points_display.gd" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://c18bq4ao22rn" path="res://systems/change_scene_button.tscn" id="3_lnu2h"]
+[ext_resource type="Texture2D" uid="uid://swfsk4vxrrco" path="res://assets/sprites/blood1.png" id="5_iywne"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_bhunq"]
 font_size = 100
+font_color = Color(1, 0, 0.12156863, 1)
 
 [node name="Node2D" type="Node2D" unique_id=1816893081]
 
@@ -34,5 +36,20 @@ offset_left = 103.0
 offset_top = 915.0
 offset_right = 248.0
 offset_bottom = 979.0
+text = "MENU"
+scene_name = "menu"
+
+[node name="Button3" parent="." unique_id=1753090942 instance=ExtResource("3_lnu2h")]
+offset_left = 1600.0
+offset_top = 915.0
+offset_right = 1745.0
+offset_bottom = 979.0
 text = "LOJA"
 scene_name = "shop"
+
+[node name="blood" type="TextureRect" parent="." unique_id=131259577]
+offset_left = 1085.0
+offset_top = 36.0
+offset_right = 1239.0
+offset_bottom = 195.0
+texture = ExtResource("5_iywne")

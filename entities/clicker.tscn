@@ -1,25 +1,86 @@
 [gd_scene format=3 uid="uid://vswro7vpx2tt"]
 
 [ext_resource type="Script" uid="uid://dak8f1wp1cbul" path="res://entities/clicker.gd" id="1_8bnsw"]
-[ext_resource type="Texture2D" uid="uid://dytbdi8k6f5oj" path="res://icon.svg" id="1_y0gwk"]
+[ext_resource type="Texture2D" uid="uid://dw4r1mmviobxw" path="res://assets/sprites/chalice.png" id="3_ojid2"]
+
+[sub_resource type="Animation" id="Animation_ojid2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
 
 [sub_resource type="Animation" id="Animation_8bnsw"]
 resource_name = "rotating"
+length = 1.1666666
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 0.36666667, 0.6333333, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.48283675, -0.008007407, 0.37247303]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ojid2"]
 _data = {
+&"RESET": SubResource("Animation_ojid2"),
 &"rotating": SubResource("Animation_8bnsw")
 }
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vlfdy"]
+atlas = ExtResource("3_ojid2")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ghu3"]
+atlas = ExtResource("3_ojid2")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bhunq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vlfdy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ghu3")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 6.0
+}]
 
 [node name="Button" type="Button" unique_id=1705117232]
 offset_left = 113.0
 offset_top = 85.0
-offset_right = 249.0
-offset_bottom = 255.0
-icon = ExtResource("1_y0gwk")
+offset_right = 245.0
+offset_bottom = 253.0
+flat = true
 script = ExtResource("1_8bnsw")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=636206450]
 libraries/ = SubResource("AnimationLibrary_ojid2")
+autoplay = &"rotating"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=808305516]
+position = Vector2(68, 83.99999)
+scale = Vector2(3.609375, 4.0312495)
+sprite_frames = SubResource("SpriteFrames_bhunq")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.82789654
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]
